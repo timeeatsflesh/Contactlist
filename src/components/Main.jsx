@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import dummyContacts from "../dummyData";
 
 const Main = () => {
-  const [contacts, setcontacts] = useState(dummyContacts);
-  
-  contacts.map((Contact) => {
-    return Contact.name;
-  });
+  const [contacts, setContacts] = useState(dummyContacts);
 
   return (
     <div id="main">
@@ -22,11 +18,11 @@ const Main = () => {
       <th>Email</th>
     </tr>
     {
-    contacts.map(Contact =>{
-      return <tr>
-        <td>{Contact.name}</td>
-        <td>{Contact.phone}</td>
-        <td>{Contact.email}</td>
+    contacts.map(contact => {
+      return <tr key = {contact.id}>
+        <td>{contact.name}</td>
+        <td>{contact.phone}</td>
+        <td>{contact.email}</td>
       </tr>;
     })
   }
