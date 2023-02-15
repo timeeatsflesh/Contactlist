@@ -10,7 +10,7 @@ return (
       <th>Email</th>
     </tr>
     {
-    contacts.map(contact => {
+    props.contacts.map(contact => {
       return <tr key = {contact.id}>
         <td>{contact.name}</td>
         <td>{contact.phone}</td>
@@ -22,3 +22,5 @@ return (
 </table>
 )
 }
+
+export default ContactList;
